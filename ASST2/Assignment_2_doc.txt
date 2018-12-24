@@ -1,0 +1,36 @@
+Mergesort Changing -
+
+For the last couple of projects, we had some issues with our mergesort. We were able to get it working however there was an error where it
+would give the csv file with a \n line between each entry. We worked on fixing this over the last project, and we ended up getting a new
+error working with directories where the entries would be sorted but with clusters of sorted titles. So we would have multiple clusters that
+were sorted, but as a whole they were not.
+	Since we had been using the same mergesort and fixing it over the last couple of months, we decided that for this project we would
+redesign the mergesort, and recode it. This was because we had fixed our old mergesort a couple of times and started to get lost in the code.
+For this mergesort we took the specific headings in order for us to keep track of how the sorting would work. This one is hard coded to 
+work for this specific assignment rather than passing the sort a number indicating which column we are sorting. This way, if we had to debug
+the code, we would be able to find exactly what was going on and organize the different if statements. We also created an array of pointers
+to help make the mergesort method more straightforward. This would prove to be more efficient in design.
+
+Methods -
+
+void bind - combined all of the movie arrays into one so we can sort one large file rather than multiple smaller ones, this would also be more efficient
+
+Movies Merge - Merged all of the sorted items into a large CSV file
+
+void thrd - a method to use to read subdirectories and navigate the directory system
+
+void csv - used to read CSV files
+
+void mytok - used to normalize tokens and entries so they can all be processed the same way (i.e. whitespace, extra characters)
+
+void Output - Outputs the sorted csv file to the main directory
+
+void parseData - parsed the columns so we can use them for Mergesort
+
+int decipher - reads inputted csv files and puts them in an array
+
+void directory - traverses directories to find subdirectories and csv files
+
+struct hash - Used to store the movies from each CSV
+
+struct list - used to store the TIDS of all the threads
